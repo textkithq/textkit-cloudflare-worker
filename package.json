@@ -1,0 +1,22 @@
+{
+  "name": "textkit-worker",
+  "private": true,
+  "description": "A Cloudflare Worker that sends texts with TextKit and receives signed reply webhooks.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "jointextkit": "^2.8.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.155.0"
+  },
+  "cloudflare": {
+    "bindings": {
+      "TEXTKIT_API_KEY": {
+        "description": "Your TextKit API key. Use a test key (`ssms_sk_test_...`) from the [console](https://jointextkit.com/console) to start in the sandbox."
+      }
+    }
+  }
+}
