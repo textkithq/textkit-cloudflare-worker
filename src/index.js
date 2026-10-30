@@ -7,8 +7,7 @@ export default {
     // Send a text. Here it goes to the sandbox number; in your app, send from
     // wherever the event happens (a signup, an order) instead of an open route.
     if (request.method === 'POST' && pathname === '/send') {
-      // Pass fetch in: Workers refuse the global fetch when a library calls it detached.
-      const sms = new TextKit(env.TEXTKIT_API_KEY, { fetch: (...args) => fetch(...args) });
+      const sms = new TextKit(env.TEXTKIT_API_KEY);
       const message = await sms.messages.send({
         to: '+15005550006',
         body: 'Hello from a Cloudflare Worker',

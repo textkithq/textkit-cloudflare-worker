@@ -7,7 +7,7 @@
     "deploy": "wrangler deploy"
   },
   "dependencies": {
-    "jointextkit": "^2.8.0"
+    "jointextkit": "^2.8.1"
   },
   "devDependencies": {
     "wrangler": "^4.155.0"
