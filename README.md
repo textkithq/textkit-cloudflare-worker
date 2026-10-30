@@ -1,13 +1,13 @@
 # TextKit Cloudflare Worker
 
-A Cloudflare Worker that sends texts with [TextKit](https://jointextkit.com) and receives replies through a signed webhook.
+A Cloudflare Worker that sends texts with [TextKit](https://jointextkit.com?ref=gh-cloudflare-worker) and receives replies through a signed webhook.
 
 [![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/textkithq/textkit-cloudflare-worker)
 
 - `POST /send` sends a text to `+15005550006`, a sandbox number that always ends `delivered`.
 - `POST /webhooks/textkit` checks the `textkit-signature` header and logs each `message.received` event.
 
-Full guide: https://jointextkit.com/integrations/cloudflare-workers
+Full guide: https://jointextkit.com/integrations/cloudflare-workers?ref=gh-cloudflare-worker
 
 ## Run it locally
 
@@ -18,7 +18,7 @@ npx wrangler dev
 curl -X POST http://localhost:8787/send
 ```
 
-Get a free test key in the [console](https://jointextkit.com/console). It runs in the sandbox: nothing reaches a real phone.
+Get a free test key in the [console](https://jointextkit.com/console?ref=gh-cloudflare-worker). It runs in the sandbox: nothing reaches a real phone.
 
 ## Deploy
 
